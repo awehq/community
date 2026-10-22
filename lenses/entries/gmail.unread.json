@@ -1,0 +1,41 @@
+{
+  "id": "gmail.unread",
+  "version": "3.0",
+  "author": "@awe",
+  "git_url": "https://github.com/awehq/community#lenses/gmail-unread",
+  "git_ref": "main",
+  "sha256_lock": "",
+  "manifest": {
+    "type": "gmail.unread",
+    "version": 3,
+    "motive": "Show the latest 10 unread emails from your Gmail inbox — sender, subject, snippet — by reading the page you're already logged into via the awe extension. Reads from an already-open Gmail tab (no hidden tabs ever opened).",
+    "url_patterns": [
+      "mail.google.com/mail/u/*/#inbox",
+      "mail.google.com/mail/u/*/#search/is:unread",
+      "mail.google.com/**"
+    ],
+    "ttl_seconds": 60,
+    "requires": {
+      "network_domains": [
+        "mail.google.com"
+      ],
+      "runs_js": false,
+      "paths": [
+        "bridge"
+      ],
+      "cookie_scope": "session",
+      "needs_session": true
+    },
+    "icon": "📩",
+    "category": "communication",
+    "author": "@awe",
+    "license": "MIT",
+    "extracts": [
+      "count",
+      "messages"
+    ]
+  },
+  "stars": 0,
+  "last_review": "2026-05-17",
+  "license": "MIT"
+}

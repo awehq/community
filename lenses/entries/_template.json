@@ -1,0 +1,39 @@
+{
+  "id": "example.recipe",
+  "version": "1.0",
+  "author": "@awe",
+  "git_url": "https://github.com/your-handle/awe-lens-example-recipe",
+  "git_ref": "main",
+  "sha256_lock": "",
+  "manifest": {
+    "type": "example.recipe",
+    "version": 1,
+    "motive": "One-sentence description of what this lens shows.",
+    "url_patterns": [
+      "*.example.com/recipe/**"
+    ],
+    "ttl_seconds": 86400,
+    "requires": {
+      "network_domains": [
+        "example.com"
+      ],
+      "runs_js": false,
+      "paths": [
+        "cheerio"
+      ],
+      "cookie_scope": "ephemeral"
+    },
+    "icon": "🍳",
+    "category": "food",
+    "author": "@your-handle",
+    "license": "MIT",
+    "extracts": [
+      "title",
+      "ingredients",
+      "steps"
+    ]
+  },
+  "stars": 0,
+  "last_review": "2026-05-17",
+  "license": "MIT"
+}

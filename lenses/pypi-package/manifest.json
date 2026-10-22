@@ -1,0 +1,21 @@
+{
+  "type": "pypi.package",
+  "version": 1,
+  "motive": "Show a PyPI package summary: latest version, summary, license, author, project URLs, and required Python version — pulled live from the PyPI JSON API.",
+  "url_patterns": [
+    "pypi.org/project/**",
+    "*.pypi.org/project/**"
+  ],
+  "ttl_seconds": 21600,
+  "requires": {
+    "network_domains": ["pypi.org"],
+    "runs_js": false,
+    "paths": ["cheerio"],
+    "cookie_scope": "ephemeral"
+  },
+  "icon": "🐍",
+  "category": "dev",
+  "author": "@awe",
+  "license": "MIT",
+  "extracts": ["name", "version", "summary", "license", "author", "requires_python", "homepage", "project_urls", "classifiers"]
+}

@@ -1,0 +1,38 @@
+{
+  "stopping_points": [
+    {
+      "id": 1,
+      "title": "Scope",
+      "options": {
+        "1": {
+          "label": "All channels",
+          "vars": {},
+          "steps": [
+            {"server": "awe-channels", "tool": "channel_status", "args": {}}
+          ]
+        },
+        "2": {
+          "label": "Messaging only",
+          "vars": {},
+          "steps": [
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "telegram"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "slack"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "discord"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "whatsapp"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "imessage"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "teams"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "googlechat"}},
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "signal"}}
+          ]
+        },
+        "3": {
+          "label": "Voice only",
+          "vars": {},
+          "steps": [
+            {"server": "awe-channels", "tool": "channel_status", "args": {"channel": "voice"}}
+          ]
+        }
+      }
+    }
+  ]
+}

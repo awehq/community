@@ -1,0 +1,47 @@
+{
+  "id": "stack.overflow",
+  "version": "1.0",
+  "author": "@awe",
+  "git_url": "https://github.com/awehq/community#lenses/stack-overflow",
+  "git_ref": "main",
+  "sha256_lock": "",
+  "manifest": {
+    "type": "stack.overflow",
+    "version": 1,
+    "motive": "Show a Stack Overflow question with its top-scoring answer body, vote counts, and accepted-answer status — pulled live from the StackExchange API.",
+    "url_patterns": [
+      "stackoverflow.com/questions/**",
+      "*.stackoverflow.com/questions/**"
+    ],
+    "ttl_seconds": 3600,
+    "requires": {
+      "network_domains": [
+        "api.stackexchange.com",
+        "stackoverflow.com"
+      ],
+      "runs_js": false,
+      "paths": [
+        "cheerio"
+      ],
+      "cookie_scope": "ephemeral"
+    },
+    "icon": "📚",
+    "category": "dev",
+    "author": "@awe",
+    "license": "MIT",
+    "extracts": [
+      "question_title",
+      "question_score",
+      "question_view_count",
+      "asker",
+      "tags",
+      "top_answer_score",
+      "top_answer_body",
+      "top_answer_author",
+      "top_answer_accepted"
+    ]
+  },
+  "stars": 0,
+  "last_review": "2026-05-17",
+  "license": "MIT"
+}

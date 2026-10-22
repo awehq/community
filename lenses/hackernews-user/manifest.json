@@ -1,0 +1,18 @@
+{
+  "type": "hackernews.user",
+  "version": 1,
+  "motive": "Show a Hacker News user profile: karma, account age, about text, and latest 5 submissions — pulled live from the Firebase API.",
+  "url_patterns": ["news.ycombinator.com/user*"],
+  "ttl_seconds": 1800,
+  "requires": {
+    "network_domains": ["news.ycombinator.com", "hacker-news.firebaseio.com"],
+    "runs_js": false,
+    "paths": ["cheerio"],
+    "cookie_scope": "ephemeral"
+  },
+  "icon": "🟠",
+  "category": "social",
+  "author": "@awe",
+  "license": "MIT",
+  "extracts": ["username", "karma", "created_at", "about", "submission_count", "latest_submissions"]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "hackernews.user",
+  "version": "1.0",
+  "author": "@awe",
+  "git_url": "https://github.com/awehq/community#lenses/hackernews-user",
+  "git_ref": "main",
+  "sha256_lock": "",
+  "manifest": {
+    "type": "hackernews.user",
+    "version": 1,
+    "motive": "Show a Hacker News user profile: karma, account age, about text, and latest 5 submissions — pulled live from the Firebase API.",
+    "url_patterns": [
+      "news.ycombinator.com/user*"
+    ],
+    "ttl_seconds": 1800,
+    "requires": {
+      "network_domains": [
+        "news.ycombinator.com",
+        "hacker-news.firebaseio.com"
+      ],
+      "runs_js": false,
+      "paths": [
+        "cheerio"
+      ],
+      "cookie_scope": "ephemeral"
+    },
+    "icon": "🟠",
+    "category": "social",
+    "author": "@awe",
+    "license": "MIT",
+    "extracts": [
+      "username",
+      "karma",
+      "created_at",
+      "about",
+      "submission_count",
+      "latest_submissions"
+    ]
+  },
+  "stars": 0,
+  "last_review": "2026-05-17",
+  "license": "MIT"
+}

@@ -1,0 +1,278 @@
+{
+  "catalog_version": 1,
+  "updated_at": "2026-10-21T00:00:00Z",
+  "entries": [
+    {
+      "id": "awe.hello-catalog",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "b53bb87a284734fe292ac5a14e7ac7bbaa2777ba083e52a53cee3b6b8bd6e0f2",
+      "skill_name": "hello-catalog",
+      "summary": "First catalog smoke-test skill",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/hello-catalog"
+      },
+      "requires_mcp": [],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "test"
+      ]
+    },
+    {
+      "id": "awe.calendar-quick-status",
+      "tier": "curated",
+      "version": "1.0.1",
+      "sha256": "92506d56852d5784193baae283fbb5e4b1ed0921a48be59d4224e8874faf3921",
+      "skill_name": "calendar-quick-status",
+      "summary": "Show what's on the user's Google Calendar — today, this week, next meeting, or by keyword",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/calendar-quick-status"
+      },
+      "requires_mcp": [
+        "google-calendar.list-events",
+        "google-calendar.get-current-time",
+        "google-calendar.search-events"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "productivity",
+        "google-calendar"
+      ]
+    },
+    {
+      "id": "awe.system-pulse",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "4ae8d10a93891c0ed19b6ea06110aefc8eb82257dd497afed520f6d36d202324",
+      "skill_name": "system-pulse",
+      "summary": "Quick system diagnostics — CPU, memory, disk, network, top processes via mcp-monitor",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/system-pulse"
+      },
+      "requires_mcp": [
+        "mcp-monitor.get_cpu_info",
+        "mcp-monitor.get_memory_info",
+        "mcp-monitor.get_disk_info",
+        "mcp-monitor.get_network_info",
+        "mcp-monitor.get_process_info"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "devops",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "awe.think-deep",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "7e3e939f9a975792b26c94ce890066fd9d52c14f19010a4e533b59f88167b41b",
+      "skill_name": "think-deep",
+      "summary": "Run a multi-step thinking session on a topic — quick, thorough, or deep audit",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/think-deep"
+      },
+      "requires_mcp": [
+        "OI-Enhanced-Thinking.start_thinking_session",
+        "OI-Enhanced-Thinking.add_thought",
+        "OI-Enhanced-Thinking.complete_thinking_session"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "reasoning",
+        "analysis"
+      ]
+    },
+    {
+      "id": "awe.dalle-image",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "7aa13561a296ecc7f083f8197f76009bd09fefe08a79c782de7b623f92f793b8",
+      "skill_name": "dalle-image",
+      "summary": "Generate images via DALL-E — quick, HD, or 4 variations",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/dalle-image"
+      },
+      "requires_mcp": [
+        "OI-dalle.generate_image",
+        "OI-dalle.create_variation"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "media",
+        "image-generation"
+      ]
+    },
+    {
+      "id": "awe.channel-status",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "aaa9ec9a75622d51879f806feef386f0d3fd39d690aa2c7876e08f5dd308ceeb",
+      "skill_name": "channel-status",
+      "summary": "Check awe's connected messaging/voice channels",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/channel-status"
+      },
+      "requires_mcp": [
+        "awe-channels.channel_status"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "ops",
+        "messaging"
+      ]
+    },
+    {
+      "id": "awe.brainstorm",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "6984092e48365da046848d66dad7f86683a3a1165e069e9bd28e8fc5d312c2ad",
+      "skill_name": "brainstorm",
+      "summary": "Brainstorm ideas via awe-llm-router — brief, standard, or wild",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/brainstorm"
+      },
+      "requires_mcp": [
+        "awe-llm-router.chat"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "reasoning",
+        "ideation"
+      ]
+    },
+    {
+      "id": "awe.research-topic",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "8240f53451b6283e61b969e9c29373fc5ed33b61c3e50988ce607cbb39cb4f06",
+      "skill_name": "research-topic",
+      "summary": "Look up library docs via context7 — quick, full, examples, or API ref",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/research-topic"
+      },
+      "requires_mcp": [
+        "OI-context7.resolve-library-id",
+        "OI-context7.query-docs"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "reference",
+        "docs"
+      ]
+    },
+    {
+      "id": "awe.voice-say",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "8890ae091328213da0768e3b4097fb5e9410f7cc8b1cb0b9a5f30e8cb8169e6c",
+      "skill_name": "voice-say",
+      "summary": "Speak text out loud — speak it, list voices, or stop playback",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/voice-say"
+      },
+      "requires_mcp": [
+        "awe-channels.voice_speak",
+        "awe-channels.voice_list_voices",
+        "awe-channels.voice_stop"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "media",
+        "voice"
+      ]
+    },
+    {
+      "id": "awe.sessions-overview",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "c43718e415f240c26dcca3090d8172370a6d7aef09fcadef1047e2a16c745161",
+      "skill_name": "sessions-overview",
+      "summary": "List active awe MCP sessions — all, or filter by server",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/sessions-overview"
+      },
+      "requires_mcp": [
+        "OI-session-manager.list_sessions"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "ops",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "awe.forgotten-contacts",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "7e51b882710a8a5079eaf0829c47375dd5c15dcd10304d60418915bfebf9c442",
+      "skill_name": "forgotten-contacts",
+      "summary": "Surface iMessage contacts you've gone quiet on",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/forgotten-contacts"
+      },
+      "requires_mcp": [
+        "imessage-mcp"
+      ],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "relationships",
+        "imessage"
+      ]
+    },
+    {
+      "id": "awe.create-a-skill",
+      "tier": "curated",
+      "version": "1.0.0",
+      "sha256": "74759b6d1466bc053b166b8482d6e140e7f9d9948b60f2decb482035b9ef4b64",
+      "skill_name": "create-a-skill",
+      "summary": "Guided wizard that builds a custom awe skill from your description — picks a type, names it, writes SKILL.md + actions.json, registers triggers",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/awehq/community",
+        "ref": "main",
+        "path_in_repo": "skills/create-a-skill"
+      },
+      "requires_mcp": [],
+      "min_oi_version": "0.5.46",
+      "tags": [
+        "meta",
+        "skill-creation",
+        "wizard"
+      ]
+    }
+  ]
+}

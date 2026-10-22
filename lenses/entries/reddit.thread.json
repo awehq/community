@@ -1,0 +1,46 @@
+{
+  "id": "reddit.thread",
+  "version": "1.0",
+  "author": "@awe",
+  "git_url": "https://github.com/awehq/community#lenses/reddit-thread",
+  "git_ref": "main",
+  "sha256_lock": "",
+  "manifest": {
+    "type": "reddit.thread",
+    "version": 1,
+    "motive": "Show a Reddit thread: title, OP body, score, top 5 comments — pulled via reddit.com/<path>/.json with no auth.",
+    "url_patterns": [
+      "reddit.com/r/*/comments/**",
+      "www.reddit.com/r/*/comments/**",
+      "old.reddit.com/r/*/comments/**"
+    ],
+    "ttl_seconds": 1800,
+    "requires": {
+      "network_domains": [
+        "reddit.com",
+        "www.reddit.com"
+      ],
+      "runs_js": false,
+      "paths": [
+        "cheerio"
+      ],
+      "cookie_scope": "ephemeral"
+    },
+    "icon": "👽",
+    "category": "social",
+    "author": "@awe",
+    "license": "MIT",
+    "extracts": [
+      "title",
+      "subreddit",
+      "author",
+      "score",
+      "body",
+      "comment_count",
+      "top_comments"
+    ]
+  },
+  "stars": 0,
+  "last_review": "2026-05-17",
+  "license": "MIT"
+}

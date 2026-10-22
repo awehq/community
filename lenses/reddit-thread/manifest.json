@@ -1,0 +1,22 @@
+{
+  "type": "reddit.thread",
+  "version": 1,
+  "motive": "Show a Reddit thread: title, OP body, score, top 5 comments with their scores and authors — pulled via reddit.com/<path>/.json with no auth.",
+  "url_patterns": [
+    "reddit.com/r/*/comments/**",
+    "www.reddit.com/r/*/comments/**",
+    "old.reddit.com/r/*/comments/**"
+  ],
+  "ttl_seconds": 1800,
+  "requires": {
+    "network_domains": ["reddit.com", "www.reddit.com"],
+    "runs_js": false,
+    "paths": ["cheerio"],
+    "cookie_scope": "ephemeral"
+  },
+  "icon": "👽",
+  "category": "social",
+  "author": "@awe",
+  "license": "MIT",
+  "extracts": ["title", "subreddit", "author", "score", "body", "comment_count", "top_comments"]
+}

@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "generated_at": 1779067190964,
+  "lenses": [
+    {
+      "id": "gmail.unread",
+      "version": "3.0",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/gmail-unread",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "gmail.unread",
+        "version": 3,
+        "motive": "Show the latest 10 unread emails from your Gmail inbox — sender, subject, snippet — by reading the page you're already logged into via the awe extension. Reads from an already-open Gmail tab (no hidden tabs ever opened).",
+        "url_patterns": [
+          "mail.google.com/mail/u/*/#inbox",
+          "mail.google.com/mail/u/*/#search/is:unread",
+          "mail.google.com/**"
+        ],
+        "ttl_seconds": 60,
+        "requires": {
+          "network_domains": [
+            "mail.google.com"
+          ],
+          "runs_js": false,
+          "paths": [
+            "bridge"
+          ],
+          "cookie_scope": "session",
+          "needs_session": true
+        },
+        "icon": "📩",
+        "category": "communication",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "count",
+          "messages"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    },
+    {
+      "id": "hackernews.user",
+      "version": "1.0",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/hackernews-user",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "hackernews.user",
+        "version": 1,
+        "motive": "Show a Hacker News user profile: karma, account age, about text, and latest 5 submissions — pulled live from the Firebase API.",
+        "url_patterns": [
+          "news.ycombinator.com/user*"
+        ],
+        "ttl_seconds": 1800,
+        "requires": {
+          "network_domains": [
+            "news.ycombinator.com",
+            "hacker-news.firebaseio.com"
+          ],
+          "runs_js": false,
+          "paths": [
+            "cheerio"
+          ],
+          "cookie_scope": "ephemeral"
+        },
+        "icon": "🟠",
+        "category": "social",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "username",
+          "karma",
+          "created_at",
+          "about",
+          "submission_count",
+          "latest_submissions"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    },
+    {
+      "id": "npm.package",
+      "version": "1.0.1",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/npm-package",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "npm.package",
+        "version": 1,
+        "motive": "Show an npm package summary: latest version, description, license, weekly downloads, dependency count, and homepage — pulled live from the npm registry.",
+        "url_patterns": [
+          "npmjs.com/package/**",
+          "www.npmjs.com/package/**",
+          "*.npmjs.com/package/**"
+        ],
+        "ttl_seconds": 21600,
+        "requires": {
+          "network_domains": [
+            "registry.npmjs.org",
+            "api.npmjs.org"
+          ],
+          "runs_js": false,
+          "paths": [
+            "cheerio"
+          ],
+          "cookie_scope": "ephemeral"
+        },
+        "icon": "📦",
+        "category": "dev",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "name",
+          "version",
+          "description",
+          "license",
+          "author",
+          "homepage",
+          "repository",
+          "keywords",
+          "dependency_count",
+          "weekly_downloads"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    },
+    {
+      "id": "pypi.package",
+      "version": "1.0",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/pypi-package",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "pypi.package",
+        "version": 1,
+        "motive": "Show a PyPI package summary: latest version, summary, license, author, project URLs, and required Python version — pulled live from the PyPI JSON API.",
+        "url_patterns": [
+          "pypi.org/project/**",
+          "*.pypi.org/project/**"
+        ],
+        "ttl_seconds": 21600,
+        "requires": {
+          "network_domains": [
+            "pypi.org"
+          ],
+          "runs_js": false,
+          "paths": [
+            "cheerio"
+          ],
+          "cookie_scope": "ephemeral"
+        },
+        "icon": "🐍",
+        "category": "dev",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "name",
+          "version",
+          "summary",
+          "license",
+          "author",
+          "requires_python",
+          "homepage",
+          "project_urls",
+          "classifiers"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    },
+    {
+      "id": "reddit.thread",
+      "version": "1.0",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/reddit-thread",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "reddit.thread",
+        "version": 1,
+        "motive": "Show a Reddit thread: title, OP body, score, top 5 comments — pulled via reddit.com/<path>/.json with no auth.",
+        "url_patterns": [
+          "reddit.com/r/*/comments/**",
+          "www.reddit.com/r/*/comments/**",
+          "old.reddit.com/r/*/comments/**"
+        ],
+        "ttl_seconds": 1800,
+        "requires": {
+          "network_domains": [
+            "reddit.com",
+            "www.reddit.com"
+          ],
+          "runs_js": false,
+          "paths": [
+            "cheerio"
+          ],
+          "cookie_scope": "ephemeral"
+        },
+        "icon": "👽",
+        "category": "social",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "title",
+          "subreddit",
+          "author",
+          "score",
+          "body",
+          "comment_count",
+          "top_comments"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    },
+    {
+      "id": "stack.overflow",
+      "version": "1.0",
+      "author": "@awe",
+      "git_url": "https://github.com/awehq/community#lenses/stack-overflow",
+      "git_ref": "main",
+      "sha256_lock": "",
+      "manifest": {
+        "type": "stack.overflow",
+        "version": 1,
+        "motive": "Show a Stack Overflow question with its top-scoring answer body, vote counts, and accepted-answer status — pulled live from the StackExchange API.",
+        "url_patterns": [
+          "stackoverflow.com/questions/**",
+          "*.stackoverflow.com/questions/**"
+        ],
+        "ttl_seconds": 3600,
+        "requires": {
+          "network_domains": [
+            "api.stackexchange.com",
+            "stackoverflow.com"
+          ],
+          "runs_js": false,
+          "paths": [
+            "cheerio"
+          ],
+          "cookie_scope": "ephemeral"
+        },
+        "icon": "📚",
+        "category": "dev",
+        "author": "@awe",
+        "license": "MIT",
+        "extracts": [
+          "question_title",
+          "question_score",
+          "question_view_count",
+          "asker",
+          "tags",
+          "top_answer_score",
+          "top_answer_body",
+          "top_answer_author",
+          "top_answer_accepted"
+        ]
+      },
+      "stars": 0,
+      "last_review": "2026-05-17",
+      "license": "MIT"
+    }
+  ]
+}
